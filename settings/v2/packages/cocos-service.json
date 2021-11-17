@@ -1,0 +1,48 @@
+{
+  "game": {
+    "app_id": "651522983",
+    "name": "Jack",
+    "c_id": "0"
+  },
+  "appConfigMaps": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "6f0493"
+    },
+    {
+      "app_id": "651522983",
+      "config_id": "f7dd58"
+    }
+  ],
+  "configs": [
+    {
+      "app_id": "UNKNOW",
+      "config_id": "6f0493",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "278",
+          "enable": false,
+          "param": {}
+        }
+      ]
+    },
+    {
+      "app_id": "651522983",
+      "config_id": "f7dd58",
+      "config_name": "Default",
+      "config_remarks": "",
+      "services": [
+        {
+          "service_id": "235",
+          "enable": false,
+          "param": {
+            "app_id": "651522983",
+            "store_id": "H5"
+          }
+        }
+      ]
+    }
+  ]
+}

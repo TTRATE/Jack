@@ -1,0 +1,41 @@
+
+Jacky.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Jackl/L_jack
+  rotate: false
+  xy: 335, 1
+  size: 90, 75
+  orig: 90, 75
+  offset: 0, 0
+  index: -1
+Jackl/body_jack
+  rotate: false
+  xy: 1, 1
+  size: 209, 248
+  orig: 209, 248
+  offset: 0, 0
+  index: -1
+Jackl/R_jack
+  rotate: false
+  xy: 238, 350
+  size: 97, 91
+  orig: 97, 91
+  offset: 0, 0
+  index: -1
+Jackl/head_jack
+  rotate: false
+  xy: 1, 251
+  size: 235, 212
+  orig: 235, 212
+  offset: 0, 0
+  index: -1
+Jackl/sword
+  rotate: false
+  xy: 238, 1
+  size: 95, 347
+  orig: 95, 347
+  offset: 0, 0
+  index: -1
