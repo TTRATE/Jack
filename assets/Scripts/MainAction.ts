@@ -90,10 +90,11 @@ export class MainAction extends Component {
     
     Init(){
          this.timeReset = Number(Login.instance.GetTimeReset());
+
          this.hightPercent = false;
          this.jack.setPosition(Vec3.ZERO);
          this.skelMeow.animation = 'Jackle01';
-         this.CountDownDelay();
+         //this.CountDownDelay();
          this.UpdateProgressBar();
          if(intervalPercent){clearInterval(intervalPercent);}
          intervalPercent =  setInterval(()=>{
@@ -201,6 +202,7 @@ export class MainAction extends Component {
     }
 
     CountDownDelay(){
+        Login.instance.UpdateUID(()=>{});
         let countDown = this.timeReset;
         this.timeDelayShow.string = countDown.toString();
         if(intervalTime){clearInterval(intervalTime)};

@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Node, AudioClip, AudioSource, resources } from 'cc';
+import { _decorator, Component, AudioClip, AudioSource, resources} from 'cc';
 const { ccclass, property } = _decorator;
 
 
@@ -21,9 +21,11 @@ export class ManagerSound extends Component {
 
     @property(AudioSource)
     playSLoop:AudioSource = null!;
+
     
 onLoad(){
    ManagerSound._instance = this;
+  
 }
 
 

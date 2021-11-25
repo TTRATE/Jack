@@ -6,7 +6,7 @@ import { ManagerSound } from './ManagerSound';
 const { ccclass, property } = _decorator;
 
 let timeExp;
-
+var intervalTime;
 function millisecondsToHuman(ms) {
     const seconds = Math.floor((ms / 1000) % 60);
     const minutes = Math.floor((ms / 1000 / 60) % 60);
@@ -47,11 +47,17 @@ export class CheckTimeCode extends Component {
         CheckTimeCode._instance = this;
     }
 
+    onDisable(){
+        this.isTimeOut = false;
+        ManagerSound.instance.StopPlayLoop();
+        clearInterval(intervalTime);
+    }
+
     CheckTimeCodeExp(){
         var timeExp = new Date(DataUserLogin.getExpireTime);
 
         this.isTimeOut = true;
-        const countDown = setInterval(()=>{
+        intervalTime = setInterval(()=>{
             let toDayTest = new Date();
             
             let dateNa = timeExp.getTime() - toDayTest.getTime();
@@ -61,7 +67,7 @@ export class CheckTimeCode extends Component {
                 Login.instance.NotiWrongAPI(true);
                 this.isTimeOut = false;
                 ManagerSound.instance.StopPlayLoop();
-                clearInterval(countDown);
+                clearInterval(intervalTime);
             }
         },1000);
     }
